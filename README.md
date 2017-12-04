@@ -70,13 +70,13 @@ If you need more control over how some of the components are rendered, you may p
 ```
 renderImage(src, alt, title) {
     return(
-        <MyImageComponent source={{uri: src}}/>
+        <MyImageComponent source={ {uri: src}} />
     );
 }
 
 renderLink(href, title, children) {
     return(
-        <MyTouchableThing onPress={() => console.log("Opening link: " + href)}>
+        <MyTouchableThing onPress={ () => console.log("Opening link: " + href) }>
             {children}
         </MyTouchableThing>
     );
@@ -84,7 +84,7 @@ renderLink(href, title, children) {
 
 renderListBullet(ordered, index) {
     return(
-        <View style={{width: 20, height: 20, backgroundColor: 'red}}/>
+        <View style={ {width: 20, height: 20, backgroundColor: 'red}} />
     );
 }
 ```
